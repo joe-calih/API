@@ -140,7 +140,9 @@ void SlateCompAudioProcessorEditor::paint(juce::Graphics& g)
     g.setFont(juce::Font(15.0f, juce::Font::bold));
     g.drawFittedText("SLATE", 30, 37, 46, 37, juce::Justification::centred, 1);
     g.setColour(blue.brighter(0.5f));
-    g.fillTriangle(9.0f, 39.0f, 9.0f, 73.0f, 29.0f, 56.0f);
+    juce::Path logoMark;
+    logoMark.addTriangle(9.0f, 39.0f, 9.0f, 73.0f, 29.0f, 56.0f);
+    g.fillPath(logoMark);
     g.setColour(juce::Colours::white);
     g.setFont(juce::Font(12.0f, juce::Font::bold));
     g.drawFittedText("VU", 393, 30, 136, 18, juce::Justification::centred, 1);
